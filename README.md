@@ -5,4 +5,8 @@ I originally built this application in 2018 as part of my 4th‑year college pro
 Below are some images showing app flowchart, this app in action and a sample report.
 <img width="603" height="730" alt="flowchart" src="https://github.com/user-attachments/assets/3b01c69c-a6f6-4a91-95da-30f6cae1b687" />
 
-<img width="670" height="406" alt="completed scan" src="https://github.com/user-attachments/assets/79fc0bc1-7456-4490-bf6b-69216c8e5fca" />
+
+<img width="1890" height="912" alt="scanner" src="https://github.com/user-attachments/assets/900f041a-9802-4ad1-99da-408ef92f639b" />
+
+
+<img width="1229" height="419" alt="csv_rep" src="https://github.com/user-attachments/assets/81c97f1b-027a-4a1c-81d6-872ef1c50f6e" />
