@@ -3,6 +3,7 @@
 ### Changed
 -Replace PDF scanner library PyPDF2 (deprecated) with library pymupdf
 -Replace 'keyWords'variable in each scanner function with '*_key_words' to hold temporary list of key words
+
 -Replace app screenshot in README with newer version function
 ### Added
 -Add screenshot of csv report in README
