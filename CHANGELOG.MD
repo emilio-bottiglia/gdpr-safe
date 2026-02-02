@@ -7,6 +7,7 @@
 -Replace app screenshot in README with newer version
 ### Added
 -Add screenshot of csv report in README
+
 -Add main()  function to start scanner
 ### Removed
 -Some redundant parenthesis in scanners' loop
