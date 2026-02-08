@@ -1,4 +1,9 @@
 # Changelog
+## v1.01 - 2026-02-08
+### Fixed
+- Missing encoding utf-8 in txt_parse() preventing proper file reading
+
+-Stremalined file reading using with
 ## v1.1 - 2026-02-02
 ### Changed
 -Replace PDF scanner library PyPDF2 (deprecated) with library pymupdf
