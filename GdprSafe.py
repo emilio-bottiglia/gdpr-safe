@@ -57,17 +57,17 @@ This application is resource intensive, if you have lot of data to scan I recomm
 any application in use before initiate scanning.
 Also make sure you have access to the folder you want to scan.
 ''')
-    dir = input ("Do you want to continue? y/n (press Enter for y): ")
-    if dir == "y" or dir == "":# if user enter y or press Enter
+    user_choice = input ("Do you want to continue? y/n (press Enter for y): ")
+    if user_choice == "y" or user_choice == "":# if user enter y or press Enter
         return helper_path()#call helperPath() to verify directory exist
-    elif dir == "n":# if user enter n, exit after 3 seconds
+    elif user_choice == "n":# if user enter n, exit after 3 seconds
         print("Goodbye!")
         sleep(3)
         exit()
     else:
         # if user type any other char, give a second chance
-        dir = input("Invalid entry. Type y/n or Enter for y :")
-        if dir == "y" or dir == "":
+        user_choice = input("Invalid entry. Type y/n or Enter for y :")
+        if user_choice == "y" or user_choice == "":
             return helper_path()
         else:
             #if again a invalid entry, exit
@@ -122,12 +122,13 @@ def txt_parse():
     list_of_lists = []
     print("Reading txt files...")
     for txt in tqdm(TXT_FILES): #tqdm - progress bar
-        file = open(txt, "r").read()
-        txt_key_words.append(txt) #add file path to the list
-        for word in WORDS:
-            #file.lower change the text in lower case to pick also words that were only uppercase
-            if (word in file.lower()) and (word not in txt_key_words):
-                txt_key_words.append(word) #add key word to the list
+        with open(txt, "r", encoding="utf-8") as f:
+            text = f.read().replace("\n", "").strip()
+            txt_key_words.append(txt) #add file path to the list
+            for word in WORDS:
+                #file.lower change the text in lower case to pick also words that were only uppercase
+                if word in text.lower() and word not in txt_key_words:
+                    txt_key_words.append(word) #add key word to the list
         list_of_lists.append(txt_key_words)
         txt_key_words = [] # reset list
     sleep(1)
