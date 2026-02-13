@@ -1,4 +1,4 @@
-#v1.11 see CHANGELOG.MD
+#v1.1.1 see CHANGELOG.MD
 
 from pathlib import Path
 import fnmatch
