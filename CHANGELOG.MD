@@ -1,5 +1,5 @@
 # Changelog
-## v1.11 - 2026-02-13
+## v1.1.1 - 2026-02-13
 ### Changed
 -Replace os with pathlib for cross-platform paths (Windows/Linux/macOS) without worrying
 about slashes. This will make the script os independent, usable in any platform
