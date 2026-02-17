@@ -1,4 +1,4 @@
-#v1.11 see CHANGELOG.MD
+#v1.1.2 see CHANGELOG.MD
 
 from pathlib import Path
 import fnmatch
@@ -8,6 +8,7 @@ import openpyxl
 import docx
 from tqdm import tqdm
 import pymupdf
+from helper import keywords
 
 #global variables to hold filenames
 txt_files = []
@@ -16,17 +17,8 @@ pdf_files = []
 docx_files = []
 excel_files = []
 
-#gdpr sample keywords
-words = ["name", "surname", "first name", "second name", "maiden name", "address",
-         "passport", "driving license", "national id", "pps", "ppsn",
-         "social security number", "sex", "sexual", "phone", "health", "religion",
-         "photo", "genetic", "political", "straight", "gay", "bisex", "transex",
-         "orientation", "location", "ip address", "child", "kid", "coordinates",
-         "physical", "mental", "lgbt", "racial", "religious", "philosophical",
-        "trade union", "children", "biological", "biomedical", "medical", "diagnostic",
-        "physiology", "behavior", "behavioural", "facial", "visual", "dactyloscopic",
-        "fingerprint", "disease", "disability", "risk", "clinical", "treatment", "physiological", "physician"]
-
+#list of GDPR key words from dictionary
+terms = [k["term"].lower() for k in keywords]
 
 #helper method to ask user to enter directory to scan and check whether
 # this exist or is valid
@@ -53,8 +45,8 @@ def helper_path():
 #directory to scan. This function returns the path
 def start():
     print('''
-Welcome to GdprSafe v1.11 by EmilioB @All rights reserved
-This application is resource intensive, if you have lot of data to scan I recommend you close
+Welcome to GdprSafe v1.1.2 by Emilio Bottiglia
+This application may be resource intensive, if you have lot of data to scan I recommend you close
 any application in use before initiate scanning.
 Also make sure you have access to the folder you want to scan.
 ''')
@@ -137,7 +129,7 @@ def txt_parse():
 
         lower_text = file_text.lower()
 
-        for word in words:
+        for word in terms:
             if (word in lower_text) and (word not in txt_key_words):
                 txt_key_words.append(word)
 
@@ -159,7 +151,7 @@ def pdf_parse():
             text = page.get_text().split()#list of words
             for word in text:
                 word_lowercase = word.lower()
-                if word_lowercase in words and word_lowercase not in pdf_key_words:
+                if word_lowercase in terms and word_lowercase not in pdf_key_words:
                     pdf_key_words.append(word_lowercase)
             list_of_lists.append(pdf_key_words)
             pdf_key_words = []
@@ -179,7 +171,7 @@ def excel_parse():
         for sheet in ws:
             for row in sheet:
                 for cell in row:
-                    for word in words:
+                    for word in terms:
                         if word == cell.value and word not in xlsx_key_words:
                             xlsx_key_words.append(word) #add key word to the list
         list_of_lists.append(xlsx_key_words)
@@ -203,7 +195,7 @@ def csv_parse():
                 #cells to lowercase to match words consistently
                 #use list comprehension
                 lower_cells = [cell.lower() for cell in line]
-                for word in words:
+                for word in terms:
                     if word in lower_cells and word not in csv_key_words:
                         csv_key_words.append(word)
 
@@ -225,7 +217,7 @@ def docx_parse():
         for par in doc_open.paragraphs: #paragraphs
             for p in par.runs:
                 p_text = p.text.lower()
-                for word in words:
+                for word in terms:
                     if (word in p_text) and (word not in docx_key_words):
                         docx_key_words.append(word)
         list_of_lists.append(docx_key_words)
