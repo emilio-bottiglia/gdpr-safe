@@ -1,5 +1,11 @@
 # Changelog
-## v1.11 - 2026-02-13
+## v1.1.2 - 2026-02-17
+### Changed
+-Formerly list of key words is now a list of dictionary with term
+categorization based on what is captured from GDPR documentation.
+This change is in preparation of an important update, where in the report file we are going to have also
+category and severity of key words 
+## v1.1.1 - 2026-02-13
 ### Changed
 -Replace os with pathlib for cross-platform paths (Windows/Linux/macOS) without worrying
 about slashes. This will make the script os independent, usable in any platform
