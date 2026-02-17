@@ -1,8 +1,5 @@
 
-#formerly list of key words is now a list of dictionary with term
-# categorization based on what is captured from GDPR documentation
-# This change is in preparation of an important update, where in the report file we also
-# have category and severity of key words
+#GDPR key words, list of dictionary
 keywords = [
     {"term": "passport",        "category": "ID",        "severity": "HIGH"},
     {"term": "national id",     "category": "ID",        "severity": "HIGH"},
