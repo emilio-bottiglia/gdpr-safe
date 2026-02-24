@@ -5,7 +5,7 @@
 
 ---
 
-## 📘 Overview  
+## Overview  
 This repository contains the written documentation for my university project on GDPR compliance, with a specific focus on interpreting the concept of an *“adequate level of protection”* and performing *initial data‑mapping activities* as required under the General Data Protection Regulation (GDPR).
 
 The project uses a hypothetical Irish e‑commerce organisation, **celticShoes.ie**, as a case study to explore organisational boundaries, identify vulnerabilities, and propose mitigation strategies aligned with GDPR expectations. It also discusses the design of a Python‑based file‑scanning tool intended to support initial data‑mapping processes.
@@ -21,7 +21,7 @@ The **application files** can be found here:
 
 ---
 
-## 🔍 Abstract  
+## Abstract  
 The introduction of the GDPR requires organisations to perform an initial data‑mapping exercise and to ensure an “adequate level of protection” for data subjects—an expression that is left deliberately undefined in the regulation. This project aims to provide a practical interpretation of this requirement by examining technical and organisational vulnerabilities within a hypothetical e‑commerce company based in Ireland. Both physical and virtual boundaries are assessed, with particular attention to security risks posed by technologies such as biometric access systems, cloud infrastructures, and common cyber‑attack vectors. For each identified vulnerability, the project outlines the associated threats and proposes remediation measures.
 
 In addition, the project introduces the concept of a Python‑based data‑mapping application, designed to scan a target directory, identify GDPR‑sensitive information across multiple file formats, and generate a structured CSV report. The resulting analysis offers a practical evaluation to support organisations—especially those newly approaching GDPR—in understanding their data‑handling risks and initiating the compliance process.
