@@ -1,12 +1,35 @@
-# gdpr-safe
-This app begins running a series of dedicated file scanners—one for DOC files, one for PDF files, one for CSV files, one for XLSX files, and one for TXT files. Each scanner processes its own file type independently, displaying a progress bar as it searches through every matching file and extracts text to look for predefined keywords. As each scanner completes its work, the app logs the file paths and any detected keywords into a single report.csv, which the admin is instructed to retrieve when all scanning is finished.
+# GDPR: A Technical Evaluation for Determining an “Adequate Level of Protection”
+**Author:** Emilio Bottiglia  
+**Institution:** Institute of Technology Blanchardstown, School of Informatics and Engineering, Dublin, Ireland / B.Sc. (Hons) Digital Forensics and Cyber Security
+**Submission Year:** 2018 
 
-I originally built this application in 2018 as part of my 4th‑year college project towards a degree BSc (Hons) in Digital Forensics and Cyber Security at the Institute of Technology Blanchardstown (now TUD), where the project—“GDPR: A Technical Evaluation for Determining an Adequate Level of Protection”—focused on GDPR compliance.
-Below are some images showing app flowchart, this app in action and a sample report.
-<img width="603" height="730" alt="flowchart" src="https://github.com/user-attachments/assets/3b01c69c-a6f6-4a91-95da-30f6cae1b687" />
+---
 
+## 📘 Overview  
+This repository contains the written documentation for my university project on GDPR compliance, with a specific focus on interpreting the concept of an *“adequate level of protection”* and performing *initial data‑mapping activities* as required under the General Data Protection Regulation (GDPR).
 
-<img width="1890" height="912" alt="scanner" src="https://github.com/user-attachments/assets/900f041a-9802-4ad1-99da-408ef92f639b" />
+The project uses a hypothetical Irish e‑commerce organisation, **celticShoes.ie**, as a case study to explore organisational boundaries, identify vulnerabilities, and propose mitigation strategies aligned with GDPR expectations. It also discusses the design of a Python‑based file‑scanning tool intended to support initial data‑mapping processes.
 
+The **full project document** can be found here:
 
-<img width="1229" height="419" alt="csv_rep" src="https://github.com/user-attachments/assets/81c97f1b-027a-4a1c-81d6-872ef1c50f6e" />
+👉 **Project_Main_Document.pdf**
+
+---
+
+## 🔍 Abstract  
+The introduction of the GDPR requires organisations to perform an initial data‑mapping exercise and to ensure an “adequate level of protection” for data subjects—an expression that is left deliberately undefined in the regulation. This project aims to provide a practical interpretation of this requirement by examining technical and organisational vulnerabilities within a hypothetical e‑commerce company based in Ireland. Both physical and virtual boundaries are assessed, with particular attention to security risks posed by technologies such as biometric access systems, cloud infrastructures, and common cyber‑attack vectors. For each identified vulnerability, the project outlines the associated threats and proposes remediation measures.
+
+In addition, the project introduces the concept of a Python‑based data‑mapping application, designed to scan a target directory, identify GDPR‑sensitive information across multiple file formats, and generate a structured CSV report. The resulting analysis offers a practical evaluation to support organisations—especially those newly approaching GDPR—in understanding their data‑handling risks and initiating the compliance process.
+
+---
+
+## 🎯 Purpose of the Repository  
+This repository serves as:
+- A **record of academic work** submitted as part of university assessment.  
+- A **portfolio artefact** demonstrating research ability, technical understanding, and documentation quality.  
+- A **reference** for others studying GDPR compliance or organisational security assessments.
+
+---
+
+## 📚 Academic Context  
+This project was submitted in part fulfilment for a degree on topics such as information security, privacy regulation, or data governance. It is intended for educational use only and should not be considered legal advice or a definitive GDPR compliance solution.
