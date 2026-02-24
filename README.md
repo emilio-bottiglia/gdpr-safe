@@ -12,7 +12,7 @@ The project uses a hypothetical Irish e‑commerce organisation, **celticShoes.i
 
 The **full project document** can be found here:
 
-👉 **Project_Main_Document.pdf**
+👉 [**Project_Main_Document.pdf**](Project_Main_Document.pdf)
 
 ---
 
