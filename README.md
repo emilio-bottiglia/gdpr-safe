@@ -12,11 +12,11 @@ The project uses a hypothetical Irish e‑commerce organisation, **celticShoes.i
 
 The **full project document** can be found here:
 
-👉 [**Project_Main_Document.pdf**](Project_Main_Document.pdf)
+[**Project_Main_Document.pdf**](Project_Main_Document.pdf)
 
 The **application files** can be found here:
 
-👉 [**application_files**](application_files)
+[**application_files**](application_files)
 
 
 ---
@@ -28,7 +28,7 @@ In addition, the project introduces the concept of a Python‑based data‑mappi
 
 ---
 
-## 🎯 Purpose of the Repository  
+## Purpose of the Repository  
 This repository serves as:
 - A **record of academic work** submitted as part of university assessment.  
 - A **portfolio artefact** demonstrating research ability, technical understanding, and documentation quality.  
