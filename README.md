@@ -36,5 +36,5 @@ This repository serves as:
 
 ---
 
-## 📚 Academic Context  
+## Academic Context  
 This project was submitted in part fulfilment for a degree on topics such as information security, privacy regulation, or data governance. It is intended for educational use only and should not be considered legal advice or a definitive GDPR compliance solution.
